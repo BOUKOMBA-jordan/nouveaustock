@@ -187,6 +187,8 @@ Route::get('/dashboard/{year}/{month}', function ($year, $month) {
         'quantitesVenduesMoisEnCours' => $quantitesVenduesMoisEnCours,
         'sommeTotale' => $sommeTotale,
         'anneesMois' => $anneesMois,
+        'year' => $year,
+        'month' => $month
     ]);
 
     // return Inertia::render('Dashboard');
