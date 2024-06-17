@@ -12,7 +12,7 @@ class Histogramme1 extends Component {
 
 		// Transformer les données en dataPoints pour le graphique
 		const dataPoints = data.map(item => ({
-			label: `${item.annee}-${String(item.mois).padStart(2, '0')}`, // Format YYYY-MM
+			label: `${String(item.mois).padStart(2, '0')}`, // Format YYYY-MM
 			y: parseInt(item.quantite_totale, 10)
 		}));
 		

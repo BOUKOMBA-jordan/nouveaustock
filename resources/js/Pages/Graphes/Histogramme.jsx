@@ -12,10 +12,15 @@ class Histogramme extends Component {
 		const { data } = this.props;
 
 		// Transformer les données en dataPoints pour le graphique
-		const dataPoints = data.map(item => ({
-			label: item.date,
-			y: parseInt(item.total_quantite, 10)
-		}));
+		const dataPoints = data.map(item => {
+			// Extraire le jour de la date (en supposant que la date soit au format YYYY-MM-DD)
+			const date = new Date(item.date);
+			const day = date.getDate(); // Obtenir le jour du mois
+			return {
+				label: day.toString(), // Utiliser le jour comme étiquette
+				y: parseInt(item.total_quantite, 10)
+			};
+		});
 
 		const options = {
 			animationEnabled: true,
@@ -23,6 +28,12 @@ class Histogramme extends Component {
 			theme: "light2",
 			title: {
 				text: "Vente en carton"
+			},
+			axisX: {
+				
+
+				interval: 1, // Forcer l'affichage de chaque label
+				
 			},
 			animationEnabled: true,
 			data: [

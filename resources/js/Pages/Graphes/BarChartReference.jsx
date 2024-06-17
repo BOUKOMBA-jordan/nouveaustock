@@ -27,13 +27,19 @@ class BarChartReference extends Component {
 				text: "Top Reférence"
 			},
 			axisX: {
-				title: "Reférences",
+				
+				title: "Références",
 				reversed: true,
+				labelFontFamily: "Arial", // Police des labels de l'axe X
+				labelFontSize: 7.5,
+				interval: 1, // Forcer l'affichage de chaque label
+				
 			},
 			axisY: {
 				title: "Quantités",
 				labelFormatter: function () { return "" }, // Masquer les valeurs sur l'axe Y
 				gridThickness: 0 // Enlever les lignes de repère sur l'axe Y
+
 			},
 			data: [{
 				type: "bar",

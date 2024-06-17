@@ -107,23 +107,24 @@ export default function Dashboard({
                             <LineChart data={ventes_totales_par_jour} />
                         </div>
                         <div className="row">
-                            <div className="col-md-3 col-lg-3 mt-5">
+                            <div className="col-md-6 col-lg-6 mt-5">
                                 <Histogramme data={utilisateur_has_produits} />
                             </div>
-                            <div className="col-md-3 col-lg-3 mt-5">
+                            <div className="col-md-6 col-lg-6 mt-5">
                                 <Histogramme1 data={quantitesVenduesParMois} />
                             </div>
 
-                            <div className="col-md-6 col-lg-6 mt-5">
-                                <BarChartReference data={results} />
-                            </div>
+                            
                         </div>
 
                         <div className="row">
                             <div className="col-md-6 mt-5">
+                                <BarChartReference data={results} />
+                            </div>
+                            <div className="col-md-3 mt-5">
                                 <BarChart data={total_ventes_par_utilisateur} />
                             </div>
-                            <div className="col-md-6 mt-5">
+                            <div className="col-md-3 mt-5">
                                 <ChartLabel data={ventes_par_mois_par_utilisateur} />
                             </div>
                         </div>
